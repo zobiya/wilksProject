@@ -1,0 +1,15 @@
+create database if not exists project_database;
+
+use project_database;
+
+create table if not exists lift_records (
+record_id INT NOT NULL primary key auto_increment,
+name CHAR(100) Not Null,
+date_of_lift DATE,
+date_posted DATE default(current_date),
+total_wilks FLOAT NOT NULL,
+benchpress_weight INT NOT NULL,
+deadlift_weight INT NOT NULL,
+squat_weight INT NOT NULL,
+body_weight INT NOT NULL,
+gender CHAR(4) NOT NULL);
